@@ -23,23 +23,14 @@ public class Ort {
         nachbarn.add(o);
     }
 
-/*
-    public boolean hasCircle(Ort o){
-        for (Ort ort : o.nachbarn) {
-            if (ort.name.equals(o.name)){
-                return true;
-            }
-            hasCircle(ort);
-        }  return false;
-    }
- */
-
     public boolean hasCircle(Ort o){
         for (Ort ort : nachbarn) {
             if (ort.nachbarn.contains(o)){
                 return true;
             }
-            ort.hasCircle(o);
+            if (ort.hasCircle(o)) {
+                return true;
+            }
         }
         return false;
     }

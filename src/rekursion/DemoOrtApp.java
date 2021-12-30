@@ -7,7 +7,6 @@ public class DemoOrtApp {
         Ort marburg = new Ort("marburg");
         Ort linz = new Ort ("linz");
 
-        /*
         graz.addNachbar(marburg);
         graz.addNachbar(wien);
 
@@ -17,18 +16,17 @@ public class DemoOrtApp {
         marburg.addNachbar(graz);
         wien.addNachbar(graz);
         linz.addNachbar(wien);
-        */
 
+/*
         graz.addNachbar(marburg);
         marburg.addNachbar(wien);
         wien.addNachbar(linz);
         linz.addNachbar(graz);
+ */
 
 
-        System.out.println(graz.hasCircle(graz));
+        System.out.println(wien.hasCircle(linz));
     }
-
-
 
 
 }
