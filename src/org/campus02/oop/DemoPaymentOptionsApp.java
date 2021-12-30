@@ -16,7 +16,11 @@ public class DemoPaymentOptionsApp {
         journal.add(maestro2);
 
         System.out.println(journal.totalTransactionCosts());
-
         System.out.println(journal.getPaymentsPerCurrency());
+
+        System.out.println("cash.exchangeToEUR= " + cash.exchangeToEUR());
+        System.out.println("maestro.exchangeToEUR= " + maestro.exchangeToEUR());
+        System.out.println("credit.exchangeToEUR= " + credit.exchangeToEUR());
     }
+
 }

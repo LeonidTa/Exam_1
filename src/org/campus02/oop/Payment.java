@@ -13,6 +13,8 @@ public abstract class Payment {
 
     public double exchangeToEUR () {
         switch (currency) {
+            case "EUR":
+                return amount;
             case "USD":
                 return amount / 1.1;
             case "GBP":

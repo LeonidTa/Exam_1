@@ -12,10 +12,10 @@ public class CreditcardPayment extends Payment{
 
     @Override
     public double calcTransactionCost() {
-        if (getCurrency() != "EUR"){
-            return 1.5 + (exchangeToEUR() * 0.0275);
-        } else {
+        if (getCurrency().equals("EUR")){
             return 0.5 + (getAmount() * 0.011);
+        } else {
+            return 1.5 + (exchangeToEUR() * 0.0275);
         }
     }
 
